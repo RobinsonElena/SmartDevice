@@ -8,20 +8,21 @@
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="preload" href="./fonts/robotocondensed-regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="./fonts/robotocondensed-bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="./fonts/roboto-medium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="./fonts/ptmono-regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <title>SmartDevice</title>
   </head>
   <body>
     <div class="wrapper">
-      <header class="header header--sticky">
-        <div class="header__container">
+      <header class="header header--sticky" data-header="sticky" data-hide-point="120">
+        <div class="header__container container">
           <a class="logo header__logo" href="index.html" aria-label="Переход на главную страницу">
             <img class="logo__image" src="img/logo/logo-desktop.svg" width="55" height="55" alt="Логотип.">
             <p class="logo__text">Smart Device <span class="logo__text-inf">умные технологии</span></p>
           </a>
           <nav class="header__nav">
             <ul class="header__list">
-              <li class="head__item">
+              <li class="header__item">
                 <a class="header__link" href="mailto:info@sd.ru">
                   <svg class="header__icon" width="20" height="20" viewBox="0 0 20 20">
                     <use href="img/sprite.svg#mail"></use>
@@ -29,7 +30,7 @@
                   <span class="header__text">info@sd.ru</span>
                 </a>
               </li>
-              <li class="head__item">
+              <li class="header__item">
                 <a class="header__link" href="tel:+74950005252">
                   <svg class="header__icon" width="20" height="20" viewBox="0 0 20 20">
                     <use href="img/sprite.svg#phone"></use>
