@@ -21,8 +21,8 @@ $color-alice-blue: #f2f5f6;
 // Gradient
 
 $black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
-$black-pearl-to-bottom:             linear-gradient(180deg, $color-black-pearl 71.72%, $color-black-pearl 100%);
-$black-pearl2-to-bottom:            linear-gradient(180deg, $color-default-black-pearl 84.9%, #04182700 100%);
+$black-pearl-to-bottom:             linear-gradient(180deg, rgba($color-black-pearl, 0.7) 71.72%, rgba($color-black-pearl, 0) 100%);
+$black-pearl2-to-bottom:            linear-gradient(180deg, rgba($color-default-black-pearl, 1) 84.9%, rgba($color-default-black-pearl, 0) 100%);
 
 // Typography
 // ---------------------------------

@@ -16,7 +16,7 @@
     <div class="wrapper">
       <header class="header header--sticky" data-header="sticky" data-hide-point="120">
         <div class="header__container container">
-          <a class="logo header__logo" href="index.html" aria-label="Переход на главную страницу">
+          <a class="logo header__logo" aria-label="Переход на главную страницу">
             <img class="logo__image" src="img/logo/logo-desktop.svg" width="55" height="55" alt="Логотип.">
             <p class="logo__text">Smart Device <span class="logo__text-inf">умные технологии</span></p>
           </a>
@@ -40,16 +40,27 @@
               </li>
             </ul>
           </nav>
-          <a class="header__button" href="#">Заказать звонок</a>
+          <a class="button header__button" href="#">Заказать звонок</a>
         </div>
       </header>
+
       <main>
-        <section class="info">
-          <div class="info__container ">
-            <h1>Печатные платы.</h1>
-            <p>производство и&nbsp;монтаж, поставка комплектующих, блоков и&nbsp;модулей.</p>
-            <a class="info__button" href="#"></a>
-            <span>Получить бесплатную консультацию</span>
+        <section class="info"> <!--https://artzolin.ru/css-examples/how-to-overlay-one-div-over-another-div-using-css/-->
+          <picture>
+            <source type="image/webp" media="(max-width: 767px)" srcset="img/bg-main-mobile.webp 1x, img/bg-main-mobile@2x.webp 2x">
+            <source type="image/webp" media="(max-width: 1023px)" srcset="img/bg-main-tablet.webp 1x, img/bg-main-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/bg-main-desktop.webp 1x, img/bg-main-desktop@2x.webp 2x">
+            <source media="(max-width: 767px)" srcset="img/bg-main-mobile.jpg 1x, img/bg-main-mobile@2x.jpg 2x">
+            <source media="(max-width: 1023px)" srcset="img/bg-main-tablet.jpg 1x, img/bg-main-tablet@2x.jpg 2x">
+            <img src="img/bg-main-desktop.jpg" width="1920" height="880" srcset="img/bg-main-desktop@2x.jpg 2x" alt="Печатная плата.">
+          </picture>
+          <div class="container info__container">
+            <h1>Печатные платы</h1>
+            <p>производство и&nbsp;монтаж, поставка комплектующих, блоков&nbsp;и&nbsp;модулей</p>
+            <a class="btn info__button" href="#feedback">
+              <span class="info__button-text">Получить бесплатную консультацию</span>
+              <span class="info__button-text-mob">Бесплатная консультация</span>
+            </a>
           </div>
         </section>
 
@@ -93,7 +104,7 @@
           <h2>О компании</h2>
           <div class="about__image-wrapper">
             <picture>
-              <source type="image/webp" srcset="img/mask-group.webp 1x, img//mask-group@2x.webp 2x">
+              <source type="image/webp" srcset="img/mask-group.webp 1x, img/mask-group@2x.webp 2x">
               <img src="img/mask-group.jpg" width="320" height="150" srcset="img/mask-group@2x.jpg 2x" alt="Текущий год 2022.">
             </picture>
             <div class="about__content">
@@ -129,7 +140,7 @@
           </div>
         </section>
 
-        <section class="feedback">
+        <section class="feedback" id="feedback">
           <div class="feedback__container">
             <h2 class="visually-hidden">Форма обратной связи.</h2>
             <div class="feedback__image-wrapper">
@@ -176,7 +187,7 @@
       <footer class="footer">
         <div class="footer__container">
           <div class="footer__social-wrapper">
-            <a class="logo footer__logo" href="index.html" aria-label="Переход на главную страницу">
+            <a class="logo footer__logo" aria-label="Переход на главную страницу">
               <img class="logo__image" src="img/logo/logo-desktop.svg" width="55" height="55" alt="Логотип.">
               <p class="logo__text">Smart Device <span class="logo__text-inf">умные технологии</span></p>
             </a>

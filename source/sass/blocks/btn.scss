@@ -1,12 +1,21 @@
 .btn {
   display: inline-flex;
-  padding: 10px 20px;
+  padding: 15px 25px;
 
-  color: $color-default-white;
+  font-family: $ff-roboto-cond;
+  font-style: normal;
+  font-weight: 700;
+  color: $color-alice-blue;
+  letter-spacing: 0.05em;
+  align-items: center;
+  text-align: center;
 
-  background-color: $color-neon-blue;
+  background-color: $color-deep-sky-blue;
   border: none;
+  border-radius: 3px;
+
   cursor: pointer;
+  text-transform: uppercase;
 
   transition: opacity $trans-default;
 
