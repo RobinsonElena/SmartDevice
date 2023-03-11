@@ -3,13 +3,16 @@
   height: 880px;
   background: $black-pearl-to-bottom;
   overflow: hidden;
+  margin-bottom: 121px;
 
   @include vp-1023 {
     height: 640px;
+    margin-bottom: 80px;
   }
 
   @include vp-767 {
     height: 560px;
+    margin-bottom: 50px;
   }
 
   img {
@@ -61,11 +64,11 @@
   }
 
   p {
-    margin: 0 0 46px;
     font-family: $ff-ptmono;
     font-size: 22px;
     line-height: 34px;
     font-weight: 400;
+    margin: 0 0 46px;
     color: $color-alice-blue;
 
     @include vp-1023 {
@@ -97,7 +100,7 @@
     font-size: 14px;
     line-height: 16px;
     color: $color-alice-blue;
-    padding: 10px 30px;
+    padding: 10px 37px;
     letter-spacing: 0.05em;
   }
 }
