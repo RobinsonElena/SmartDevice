@@ -45,6 +45,8 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  color: $color-deep-sky-blue;
+
   min-height: 300px;
   padding: 40px 45px 35px;
   border: 1px solid $color-whisper2;
@@ -102,6 +104,16 @@
     @include vp-767 {
       font-size: 14px;
       line-height: 19px;
+    }
+  }
+
+  @include hover-focus {
+    background-color: $color-deep-sky-blue;
+
+    h3,
+    p,
+    svg {
+      color: $color-alice-blue;
     }
   }
 }

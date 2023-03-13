@@ -1408,6 +1408,10 @@ button,
   margin-right: 15px;
 }
 
+.header__link.focus-visible:focus {
+  color: #00b2ff;
+}
+
 .header__button {
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-size: 14px;
@@ -1420,6 +1424,11 @@ button,
   border-radius: 3px;
   padding: 10px 15px;
   margin: 0;
+}
+
+.header__button.focus-visible:focus {
+  color: #00b2ff;
+  border-color: #00b2ff;
 }
 
 .info {
@@ -1509,6 +1518,7 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  color: #00b2ff;
   min-height: 300px;
   padding: 40px 45px 35px;
   border: 1px solid #ebebeb;
@@ -1548,6 +1558,16 @@ button,
   font-weight: 400;
   color: #00b2ff;
   margin: 0;
+}
+
+.advantage__item.focus-visible:focus {
+  background-color: #00b2ff;
+}
+
+.advantage__item.focus-visible:focus h3,
+.advantage__item.focus-visible:focus p,
+.advantage__item.focus-visible:focus svg {
+  color: #f2f5f6;
 }
 
 /* @mixin hover-focus {
@@ -1863,5 +1883,24 @@ button,
 
   .custom-select__item:hover:not(.focus-visible) {
     background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .header__link:hover:not(.focus-visible) {
+    color: #00b2ff;
+  }
+
+  .header__button:hover:not(.focus-visible) {
+    color: #00b2ff;
+    border-color: #00b2ff;
+  }
+
+  .advantage__item:hover:not(.focus-visible) {
+    background-color: #00b2ff;
+  }
+
+  .advantage__item:hover:not(.focus-visible) h3,
+  .advantage__item:hover:not(.focus-visible) p,
+  .advantage__item:hover:not(.focus-visible) svg {
+    color: #f2f5f6;
   }
 }
