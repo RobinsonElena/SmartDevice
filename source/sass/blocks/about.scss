@@ -1,3 +1,99 @@
-.about {
+.about__container {
+  display: flex;
+  gap: 100px;
+  padding-bottom: 120px;
+
+  @include vp-1023 {
+    gap: 27px;
+    align-items: start;
+    padding: 0 48px 80px;
+  }
+
+  @include vp-767 {
+    padding: 0 25px 80px;
+  }
+
+  img {
+    @include vp-767 {
+      display: none;
+    }
+  }
+}
+
+.about__content {
+  h2 {
+    font-family: $ff-roboto-cond;
+    font-size: 36px;
+    line-height: 50px;
+    font-weight: 400;
+    color: $color-default-black-pearl;
+    margin: 0 0 13px;
+
+    @include vp-1023 {
+      margin: 0 0 7px;
+    }
+
+    @include vp-767 {
+      font-size: 28px;
+      line-height: 39px;
+      margin: 0 0 11px;
+    }
+  }
+
+  p {
+    font-family: $ff-ptmono;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+    color: $color-default-black-pearl;
+    margin: 0 0 20px;
+
+    @include vp-1023 {
+      margin: 0 0 19px;
+    }
+
+    @include vp-767 {
+      font-size: 14px;
+      line-height: 19px;
+    }
+  }
+}
+
+.about__text {
+  @include vp-767 {
+    margin-bottom: -5px;
+  }
+}
+
+.about__text-mob {
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.about__button {
   display: block;
+  width: 180px;
+  font-size: 14px;
+  line-height: 16px;
+  color: $color-deep-sky-blue;
+  border: 1px solid $color-deep-sky-blue;
+  background-color: transparent;
+  margin-top: 22px;
+  padding: 14px 13px 8px;
+  text-align: center;
+
+  @include vp-1023 {
+    margin-top: 0;
+  }
+
+  @include vp-767 {
+    width: 160px;
+    padding: 8px 12px 9px;
+  }
+
+  @include hover-focus {
+    color: $color-deep-sky-blue;
+    border-color: $color-deep-sky-blue;
+  }
 }

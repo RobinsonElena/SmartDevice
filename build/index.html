@@ -40,7 +40,7 @@
               </li>
             </ul>
           </nav>
-          <a class="button header__button" href="#">Заказать звонок</a>
+          <a class="btn header__button" href="#">Заказать звонок</a>
         </div>
       </header>
 
@@ -82,14 +82,14 @@
                 <h3>Крупные поставщики</h3>
                 <p>Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND. Сотрудничество с&nbsp;такими компаниями обеспечивает хорошее качество нашей продукции.</p>
               </li>
-              <li class="advantage__item">
+              <li class="advantage__item advantage__item--short">
                 <svg width="35" height="35" viewBox="0 0 35 35">
                   <use href="img/sprite.svg#detective"></use>
                 </svg>
                 <h3>Полная конфиденциальность</h3>
                 <p>По&nbsp;желанию клиента мы&nbsp;обеспечиваем полную конфиденциальность.</p>
               </li>
-              <li class="advantage__item">
+              <li class="advantage__item advantage__item--short">
                 <svg width="35" height="35" viewBox="0 0 35 35">
                   <use href="img/sprite.svg#tag"></use>
                 </svg>
@@ -101,19 +101,22 @@
         </section>
 
         <section class="about">
-          <h2>О компании</h2>
-          <div class="about__image-wrapper">
-            <picture>
-              <source type="image/webp" srcset="img/mask-group.webp 1x, img/mask-group@2x.webp 2x">
-              <img src="img/mask-group.jpg" width="320" height="150" srcset="img/mask-group@2x.jpg 2x" alt="Текущий год 2022.">
-            </picture>
-            <div class="about__content">
-              <p>Мы&nbsp;поставляем электронные комплектующие, производим печатные платы и&nbsp;предоставляем мировые технологии с&nbsp;1997&nbsp;года. Выполняем срочные заказы и&nbsp;пилотные образцы до&nbsp;10&nbsp;дней.</p>
-              <p>Наши поставщики&nbsp;&mdash; мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и&nbsp;комплектующие Service Devices применяются на&nbsp;предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</p>
-              <p>Smart Device&nbsp;&mdash; это команда профессионалов. Через нас прошло более 1&nbsp;000&nbsp;000&nbsp;клиентов, 70% из&nbsp;которых продолжают сотрудничество по&nbsp;сей день. На&nbsp;данный момент насчитывается более 14&nbsp;офисов по&nbsp;всей стране и&nbsp;20&nbsp;городов присутствия.</p>
-              <p>Мы&nbsp;стремимся к&nbsp;постоянному развитию и&nbsp;повышению уровня качества продукции, производимой внутри компании. Использование инновационных технологий помогает экономить деньги и&nbsp;время наших клиентов</p>
+          <div class="about__container container accordion" data-accordion="parent">
+            <img src="img/mask-group.svg" width="150" height="320" alt="Текущий год 2022.">
+            <div class="about__wrapper">
+              <div class="about__content accordion__element" data-accordion="element">
+                <h2>О компании</h2>
+                <div class="about__text">
+                  <p>Мы&nbsp;поставляем электронные комплектующие, производим печатные платы и&nbsp;предоставляем мировые технологии с&nbsp;1997&nbsp;года. Выполняем срочные заказы и&nbsp;пилотные образцы до&nbsp;10&nbsp;дней.</p>
+                  <p>Наши поставщики&nbsp;&mdash; мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. <span class="about__text-mob">Печатные платы и&nbsp;комплектующие Service Devices применяются на&nbsp;предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</span></p>
+                </div>
+                <div class="accordion__content" data-accordion="content">
+                  <p>Smart Device&nbsp;&mdash; это команда профессионалов. Через нас прошло более 1&nbsp;000&nbsp;000&nbsp;клиентов, 70% из&nbsp;которых продолжают сотрудничество по&nbsp;сей день. На&nbsp;данный момент насчитывается более 14&nbsp;офисов по&nbsp;всей стране и&nbsp;20&nbsp;городов присутствия.</p>
+                  <p>Мы&nbsp;стремимся к&nbsp;постоянному развитию и&nbsp;повышению уровня качества продукции, производимой внутри компании. Использование инновационных технологий помогает экономить деньги и&nbsp;время наших клиентов</p>
+                </div>
+                <button class="btn about__button accordion__button" type="button" data-accordion="button">Подробнее</button>
+              </div>
             </div>
-            <button class="about__button">Подробнее</button>
           </div>
         </section>
 

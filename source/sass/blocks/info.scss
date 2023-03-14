@@ -3,7 +3,7 @@
   height: 880px;
   background: $black-pearl-to-bottom;
   overflow: hidden;
-  margin-bottom: 121px;
+  margin-bottom: 120px;
 
   @include vp-1023 {
     height: 640px;
@@ -12,7 +12,7 @@
 
   @include vp-767 {
     height: 560px;
-    margin-bottom: 50px;
+    margin-bottom: 49px;
   }
 
   img {

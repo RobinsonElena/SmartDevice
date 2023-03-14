@@ -6,12 +6,12 @@
   }
 
   @include vp-767 {
-    margin-bottom: 50px;
+    margin-bottom: 48px;
   }
 }
 
 .advantage__container {
-  padding: 0 98px 0 100px;
+  //padding: 0 98px 0 100px;
 
   @include vp-1023 {
     align-items: start;
@@ -53,7 +53,7 @@
 
   @include vp-1023 {
     min-height: 360px;
-    padding: 40px 30px 35px 45px;
+    padding: 40px 30px 28px 45px;
   }
 
   @include vp-767 {
@@ -61,12 +61,18 @@
     padding: 30px 30px 35px;
   }
 
+  &--short {
+    @include vp-767 {
+      min-height: 325px;
+    }
+  }
+
   &::before {
     content: "";
     position: absolute;
     display: block;
     top: 0;
-    left: 0;
+    left: -1px;
     width: 5px;
     height: 100%;
     background-color: $color-deep-sky-blue;
@@ -77,6 +83,16 @@
     height: 35px;
     margin-bottom: 20px;
     fill: $color-deep-sky-blue;
+
+    @include vp-1023 {
+      margin-bottom: 15px;
+    }
+
+    @include vp-767 {
+      width: 30px;
+      height: 30px;
+      margin-bottom: 18px;
+    }
   }
 
   h3 {
@@ -85,7 +101,11 @@
     line-height: 34px;
     font-weight: 400;
     color: $color-deep-sky-blue;
-    margin: 0 0 15px;
+    margin: 0 0 13px;
+
+    @include vp-1023 {
+      margin-bottom: 7px;
+    }
 
     @include vp-767 {
       font-size: 20px;
