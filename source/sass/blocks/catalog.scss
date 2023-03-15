@@ -1,0 +1,140 @@
+.catalog {
+  background-color: $color-default-black-pearl;
+}
+
+.catalog__container {
+  padding-top: 67px;
+  padding-bottom: 140px;
+
+  @include vp-1023 {
+    padding-top: 57px;
+    padding-bottom: 75px;
+  }
+
+  @include vp-767 {
+    padding-top: 47px;
+    padding-bottom: 86px;
+  }
+}
+
+.catalog__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0 85px;
+  margin: 0 0;
+  padding: 0;
+  list-style-type: none;
+
+  @include vp-1023 {
+    grid-template-columns: 1fr;
+    gap: 30px 31px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    gap: 30px 29px;
+  }
+}
+
+h2 {
+  font-family: $ff-roboto-cond;
+  font-size: 36px;
+  line-height: 50px;
+  font-weight: 400;
+  color: $color-default-white;
+  margin: 0 0 53px;
+
+  @include vp-1023 {
+    margin: 0 0 38px;
+  }
+
+  @include vp-767 {
+    font-size: 28px;
+    line-height: 39px;
+    margin: 0 0 30px;
+  }
+}
+
+.catalog__title {
+  display: inline;
+
+  @include vp-767 {
+    display: none;
+  }
+
+  &--mobile {
+    display: none;
+
+    @include vp-767 {
+      display: inline;
+    }
+  }
+}
+
+.catalog__link {
+  position: relative;
+  display: block;
+  height: 650px;
+  padding: 48px 80px 50px 40px;
+  transition: opacity $trans-default;
+
+  @include vp-1023 {
+    height: 250px;
+    padding: 37px 80px 50px 45px;
+  }
+
+  @include vp-767 {
+    padding: 25px 90px 30px 30px;
+  }
+
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    background-color: $color-black-pearl;
+  }
+
+  h3 {
+    position: absolute;
+    font-family: $ff-roboto-cond;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+    color: $color-default-white;
+    margin: 0;
+    padding-right: 150px;
+
+    @include vp-1023 {
+      padding-right: 480px;
+    }
+
+    @include vp-767 {
+      font-size: 18px;
+      line-height: 30px;
+      padding-right: 90px;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    bottom: 0;
+    right: 0;
+    background-image: url("../../img/svg/arrow.svg");
+    background-position: center;
+
+    @include vp-767 {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  @include hover-focus {
+    opacity: 0.8;
+  }
+}
