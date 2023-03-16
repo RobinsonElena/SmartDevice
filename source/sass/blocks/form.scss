@@ -4,6 +4,35 @@
   gap: 20px 30px;
   padding-left: 5px;
 
+  input,
+  textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 400;
+    color: $color-default-black;
+    background-color: rgba(4, 20, 39, 0.15);
+    border: 0;
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:focus {
+      outline: 1px solid $color-default-white;
+      outline-offset: 2px;
+    }
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: $color-default-white;
+  }
+
   @include vp-1023 {
     padding-left: 0;
   }
@@ -11,28 +40,44 @@
   @include vp-767 {
     grid-template-columns: 1fr;
   }
+
+  label {
+    &.is-invalid {
+      input,
+      textarea {
+        outline: 2px solid $color-torch-red;
+
+        &:focus,
+        &:hover {
+          outline: 2px solid rgba($color-torch-red, 0.5);
+        }
+      }
+    }
+  }
 }
 
-.form input::placeholder,
-.form textarea::placeholder {
-  color: $color-default-white;
-}
+label {
+  position: relative;
 
-.form label {
-  font-size: 16px;
-  line-height: 21px;
-  font-weight: 400;
-}
+  .input-message {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    font-size: 15px;
+    line-height: 15px;
 
-.form input,
-.form textarea {
-  width: 100%;
-  padding: 15px;
-  color: $color-default-black;
-  background-color: rgba(4, 20, 39, 0.15);
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
+    &.is-invalid {
+      color: $color-torch-red;
+    }
+
+    &.is-valid {
+      color: $color-neon-blue;
+    }
+
+    @include vp-1023 {
+      top: -35px;
+    }
+  }
 }
 
 .form__textarea {
@@ -129,7 +174,7 @@
 }
 
 .form__label {
-  font-family: $ff-ptmono; /*для подписи к чекбоксу*/
+  font-family: $ff-ptmono;
   font-size: 14px;
   line-height: 15px;
   font-weight: 400;

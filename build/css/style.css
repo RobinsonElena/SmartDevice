@@ -1769,6 +1769,9 @@ h2 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .feedback__image-wrapper {
@@ -1776,7 +1779,7 @@ h2 {
 }
 
 .feedback__form-wrapper {
-  width: 585px;
+  max-width: 585px;
 }
 
 .feedback__form-wrapper h3 {
@@ -1807,6 +1810,32 @@ h2 {
   padding-left: 5px;
 }
 
+.form input,
+.form textarea {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #000000;
+  background-color: rgba(4, 20, 39, 0.15);
+  border: 0;
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+}
+
+.form input:hover,
+.form textarea:hover {
+  opacity: 0.8;
+}
+
+.form input:focus,
+.form textarea:focus {
+  outline: 1px solid #ffffff;
+  outline-offset: 2px;
+}
+
 .form input::-webkit-input-placeholder,
 .form textarea::-webkit-input-placeholder {
   color: #ffffff;
@@ -1832,21 +1861,36 @@ h2 {
   color: #ffffff;
 }
 
-.form label {
-  font-size: 16px;
-  line-height: 21px;
-  font-weight: 400;
+.form label.is-invalid input,
+.form label.is-invalid textarea {
+  outline: 2px solid #ff1553;
 }
 
-.form input,
-.form textarea {
-  width: 100%;
-  padding: 15px;
-  color: #000000;
-  background-color: rgba(4, 20, 39, 0.15);
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
+.form label.is-invalid input:focus,
+.form label.is-invalid input:hover,
+.form label.is-invalid textarea:focus,
+.form label.is-invalid textarea:hover {
+  outline: 2px solid rgba(255, 21, 83, 0.5);
+}
+
+label {
+  position: relative;
+}
+
+label .input-message {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  font-size: 15px;
+  line-height: 15px;
+}
+
+label .input-message.is-invalid {
+  color: #ff1553;
+}
+
+label .input-message.is-valid {
+  color: #2c39f2;
 }
 
 .form__textarea {
@@ -1912,7 +1956,6 @@ h2 {
 
 .form__label {
   font-family: "PT Mono", "Arial", sans-serif;
-  /*для подписи к чекбоксу*/
   font-size: 14px;
   line-height: 15px;
   font-weight: 400;
@@ -2115,7 +2158,7 @@ h2 {
   }
 
   .feedback__form-wrapper {
-    width: 670px;
+    max-width: 670px;
   }
 
   .feedback__form-wrapper h3 {
@@ -2129,6 +2172,10 @@ h2 {
 
   .form {
     padding-left: 0;
+  }
+
+  label .input-message {
+    top: -35px;
   }
 
   .form__textarea textarea {
@@ -2357,7 +2404,7 @@ h2 {
   }
 
   .feedback__form-wrapper {
-    width: 270px;
+    max-width: 270px;
   }
 
   .feedback__form-wrapper h3 {

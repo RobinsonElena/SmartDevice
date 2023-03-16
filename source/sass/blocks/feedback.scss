@@ -25,6 +25,7 @@
   padding-top: 167px;
   padding-bottom: 250px;
   align-items: center;
+  justify-content: center;
 
   @include vp-1023 {
     padding-top: 46px;
@@ -46,14 +47,14 @@
 }
 
 .feedback__form-wrapper {
-  width: 585px;
+  max-width: 585px;
 
   @include vp-1023 {
-    width: 670px;
+    max-width: 670px;
   }
 
   @include vp-767 {
-    width: 270px;
+    max-width: 270px;
   }
 
   h3 {
