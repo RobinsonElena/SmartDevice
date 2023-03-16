@@ -731,8 +731,8 @@ button,
 
 .modal {
   position: fixed;
-  top: 0;
-  right: 0;
+  top: 86px;
+  right: 15px;
   bottom: 0;
   left: 0;
   z-index: 1000;
@@ -794,22 +794,32 @@ button,
 
 .modal__content {
   position: relative;
-  width: 600px;
-  padding: 40px;
-  background-color: #ffffff;
+  width: 500px;
+  background-color: #00b3ff;
 }
 
 .modal__close-btn {
   position: absolute;
-  top: 22px;
-  right: 22px;
+  top: 16px;
+  right: 16px;
   z-index: 1;
   width: 40px;
   height: 40px;
   padding: 0;
   background: rgba(255, 255, 255, 0);
+  color: #ffffff;
   border: none;
   cursor: pointer;
+}
+
+.modal__close-btn:hover {
+  opacity: 0.8;
+}
+
+.modal__close-btn:focus {
+  border-radius: 3px;
+  outline: 1px solid #ffffff;
+  outline-offset: 2px;
 }
 
 .modal--responsive .modal__content {
@@ -1758,6 +1768,10 @@ h2 {
   background-color: rgba(4, 24, 39, 0.5);
 }
 
+.feedback--modal::before {
+  display: none;
+}
+
 .feedback__container {
   position: relative;
   display: -webkit-box;
@@ -1772,6 +1786,11 @@ h2 {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+}
+
+.feedback__container--modal {
+  padding-top: 38px;
+  padding-bottom: 45px;
 }
 
 .feedback__image-wrapper {
@@ -1801,6 +1820,18 @@ h2 {
   padding-left: 5px;
 }
 
+.feedback__form-wrapper--modal h3 {
+  font-size: 30px;
+  line-height: 42px;
+  margin: 0 0 5px;
+  padding-left: 0;
+}
+
+.feedback__form-wrapper--modal p {
+  padding-left: 0;
+  margin: 0 0 36px;
+}
+
 .form {
   display: -ms-grid;
   display: grid;
@@ -1825,13 +1856,13 @@ h2 {
   cursor: pointer;
 }
 
-.form input:hover,
-.form textarea:hover {
+.form input.focus-visible:focus,
+.form textarea.focus-visible:focus {
   opacity: 0.8;
 }
 
-.form input:focus,
-.form textarea:focus {
+.form input.focus-visible:focus.focus-visible:focus,
+.form textarea.focus-visible:focus.focus-visible:focus {
   outline: 1px solid #ffffff;
   outline-offset: 2px;
 }
@@ -1873,6 +1904,12 @@ h2 {
   outline: 2px solid rgba(255, 21, 83, 0.5);
 }
 
+.form--modal {
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  padding-left: 0;
+}
+
 label {
   position: relative;
 }
@@ -1908,6 +1945,11 @@ label .input-message.is-valid {
   padding: 16px 25px 11px;
   text-align: center;
   background-color: #041427;
+}
+
+.form__button--modal {
+  margin-right: 0;
+  padding: 14px 25px 11px;
 }
 
 .form__checkbox {
@@ -2188,6 +2230,11 @@ label .input-message.is-valid {
     padding: 19px 25px 9px;
   }
 
+  .form__button--modal {
+    margin-right: 0;
+    padding: 14px 25px 11px;
+  }
+
   .form__checkbox {
     -ms-flex-item-align: center;
     -ms-grid-row-align: center;
@@ -2218,7 +2265,6 @@ label .input-message.is-valid {
 
   .modal__content {
     width: 100%;
-    padding: 20px;
   }
 
   .modal--fit-content .modal__content {
@@ -2544,5 +2590,16 @@ label .input-message.is-valid {
 
   .catalog__link:hover:not(.focus-visible) {
     opacity: 0.8;
+  }
+
+  .form input:hover:not(.focus-visible),
+  .form textarea:hover:not(.focus-visible) {
+    opacity: 0.8;
+  }
+
+  .form input:hover:not(.focus-visible).focus-visible:focus,
+  .form textarea:hover:not(.focus-visible).focus-visible:focus {
+    outline: 1px solid #ffffff;
+    outline-offset: 2px;
   }
 }

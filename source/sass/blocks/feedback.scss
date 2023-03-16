@@ -16,6 +16,12 @@
       display: none;
     }
   }
+
+  &--modal {
+    &::before {
+      display: none;
+    }
+  }
 }
 
 .feedback__container {
@@ -35,6 +41,11 @@
   @include vp-767 {
     padding-top: 46px;
     padding-bottom: 90px;
+  }
+
+  &--modal {
+    padding-top: 38px;
+    padding-bottom: 45px;
   }
 }
 
@@ -92,6 +103,20 @@
     @include vp-767 {
       font-size: 14px;
       line-height: 18px;
+      margin: 0 0 36px;
+    }
+  }
+
+  &--modal {
+    h3 {
+      font-size: 30px;
+      line-height: 42px;
+      margin: 0 0 5px;
+      padding-left: 0;
+    }
+
+    p {
+      padding-left: 0;
       margin: 0 0 36px;
     }
   }
