@@ -1,0 +1,36 @@
+.social__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 150px;
+  padding: 0;
+  list-style-type: none;
+  margin-left: 10px;
+
+  @include vp-1023 {
+    width: 165px;
+    gap: 16px;
+    justify-content: center;
+  }
+}
+
+.social__item {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+
+.social__link {
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover,
+  &:focus {
+    background-color: $color-default-black-pearl;
+    border-radius: 50%;
+    opacity: 0.8;
+  }
+}

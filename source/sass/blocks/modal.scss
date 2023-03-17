@@ -1,7 +1,7 @@
 .modal {
   position: fixed;
-  top: 86px;
-  right: 15px;
+  top: 0;
+  right: 0;
   bottom: 0;
   left: 0;
   z-index: 1000;
@@ -38,10 +38,10 @@
     align-items: center;
     width: 100%;
     min-height: 100%;
-    padding: 60px 40px;
+    padding: 146px 55px 84px 40px;
 
     @include vp-767 {
-      padding: 60px 16px;
+      padding: 146px 16px;
     }
   }
 

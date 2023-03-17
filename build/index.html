@@ -14,11 +14,13 @@
   </head>
   <body>
     <div class="wrapper">
-      <header class="header header--sticky" data-header="sticky" data-hide-point="120">
+      <header class="header">
         <div class="header__container container">
           <a class="logo header__logo" aria-label="Переход на главную страницу">
-            <img src="img/logo/logo-desktop.svg" width="55" height="55" alt="Логотип.">
-            <p>Smart Device <span>умные технологии</span></p>
+            <picture>
+              <source media="(max-width: 767px)" srcset="img/logo/logo-mobile.svg">
+              <img src="img/logo/logo-desktop.svg" width="215" height="55" alt="Логотип.">
+            </picture>
           </a>
           <nav class="header__nav">
             <ul class="header__list">
@@ -45,15 +47,7 @@
       </header>
 
       <main>
-        <section class="info"> <!--https://artzolin.ru/css-examples/how-to-overlay-one-div-over-another-div-using-css/-->
-          <picture>
-            <source type="image/webp" media="(max-width: 767px)" srcset="img/bg-main-mobile.webp 1x, img/bg-main-mobile@2x.webp 2x">
-            <source type="image/webp" media="(max-width: 1023px)" srcset="img/bg-main-tablet.webp 1x, img/bg-main-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/bg-main-desktop.webp 1x, img/bg-main-desktop@2x.webp 2x">
-            <source media="(max-width: 767px)" srcset="img/bg-main-mobile.jpg 1x, img/bg-main-mobile@2x.jpg 2x">
-            <source media="(max-width: 1023px)" srcset="img/bg-main-tablet.jpg 1x, img/bg-main-tablet@2x.jpg 2x">
-            <img src="img/bg-main-desktop.jpg" width="1920" height="880" srcset="img/bg-main-desktop@2x.jpg 2x" alt="Печатная плата.">
-          </picture>
+        <section class="info">
           <div class="container info__container">
             <h1>Печатные платы</h1>
             <p>производство и&nbsp;монтаж, поставка комплектующих, блоков&nbsp;и&nbsp;модулей</p>
@@ -213,11 +207,10 @@
       </main>
 
       <footer class="footer">
-        <div class="footer__container">
+        <div class="footer__container container accordion" data-accordion="parent" data-destroy="(max-width: 767px)" data-single>
           <div class="footer__social-wrapper">
-            <a class="logo footer__logo" aria-label="Переход на главную страницу">
-              <img src="img/logo/logo-desktop.svg" width="55" height="55" alt="Логотип.">
-              <p class="logo__text">Smart Device <span class="logo__text-inf">умные технологии</span></p>
+            <a class="logo logo--footer footer__logo" aria-label="Переход на главную страницу">
+              <img src="img/logo/logo-desktop.svg" width="215" height="55" alt="Логотип.">
             </a>
             <div class="social footer__social">
               <ul class="social__list">
@@ -249,9 +242,9 @@
             </div>
           </div>
           <div class="footer__nav-wrapper">
-            <div class="footer__nav">
-              <h2>Разделы сайта</h2>
-              <div class="footer__nav-content">
+            <div class="footer__nav accordion__element" data-accordion="element">
+              <h2 class="accordion__button" data-accordion="button">Разделы сайта</h2>
+              <div class="footer__nav-content accordion__content" data-accordion="content">
                 <ul class="footer__list">
                   <li class="footer__item">
                     <a class="footer__link" href="#">О Компании</a>
@@ -279,10 +272,10 @@
                 </ul>
               </div>
             </div>
-            <div class="footer__address">
-              <h2>Наш офис</h2>
-              <div class="footer__nav-content">
-                <ul class="footer__list">
+            <div class="footer__address accordion__element" data-accordion="element">
+              <h2 class="accordion__button" data-accordion="button">Наш офис</h2>
+              <div class="footer__nav-content accordion__content" data-accordion="content">
+                <ul class="footer__list footer__list--address">
                   <li class="footer__item">
                     <a class="footer__link" href="#">
                       <address>г. Мытищи, Олимпийский проспект, д.10</address>

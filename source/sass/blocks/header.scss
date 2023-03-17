@@ -1,13 +1,10 @@
 .header {
   background-image: $black-pearl2-to-bottom;
   z-index: 30;
-
-  &--sticky {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 .header__container {
@@ -43,44 +40,6 @@
     height: 35px;
   }
 }
-
-.logo {
-  img {
-    padding-top: 2px;
-
-    @include vp-767 {
-      padding-top: 9px;
-    }
-  }
-
-  p {
-    display: flex;
-    flex-direction: column;
-    font-family: $ff-roboto-cond;
-    font-size: 25px;
-    line-height: 29px;
-    font-weight: 700;
-    color: $color-default-white;
-    margin: 0 0 0 15px;
-
-    @include vp-767 {
-      display: none;
-    }
-  }
-
-  span {
-    font-family: $ff-roboto;
-    font-size: 12px;
-    line-height: 14px;
-    font-weight: 500;
-    color: rgba(225, 225, 225, 0.7);
-
-    @include vp-767 {
-      display: none;
-    }
-  }
-}
-
 
 .header__list {
   display: flex;
