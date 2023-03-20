@@ -43,6 +43,7 @@
   }
 
   label {
+    position: relative;
     display: block;
 
     &.is-invalid {
@@ -56,36 +57,31 @@
         }
       }
     }
+
+    .input-message {
+      position: absolute;
+      top: -32px;
+      left: 0;
+      font-size: 15px;
+      line-height: 15px;
+
+      &.is-invalid {
+        color: $color-torch-red;
+      }
+
+      &.is-valid {
+        color: $color-neon-blue;
+      }
+
+      @include vp-1023 {
+        top: -19px;
+      }
+    }
   }
 
   &--modal {
     grid-template-columns: 1fr;
     padding-left: 0;
-  }
-}
-
-label {
-  display: block;
-  position: relative;
-
-  .input-message {
-    position: absolute;
-    top: -50px;
-    left: 0;
-    font-size: 15px;
-    line-height: 15px;
-
-    &.is-invalid {
-      color: $color-torch-red;
-    }
-
-    &.is-valid {
-      color: $color-neon-blue;
-    }
-
-    @include vp-1023 {
-      top: -35px;
-    }
   }
 }
 
