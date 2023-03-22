@@ -11,7 +11,7 @@
   @include vp-1023 {
     grid-template-columns: 1fr;
     column-gap: 0;
-    padding: 51px 38px 59px 50px;
+    padding: 51px 38px 53px 50px;
   }
 
   @include vp-767 {
@@ -92,7 +92,7 @@
     font-weight: 400;
     letter-spacing: 0.05em;
     color: $color-default-white;
-    margin-bottom: 21px;
+    margin: 0 0 21px;
     padding: 0;
     text-transform: uppercase;
 
@@ -133,14 +133,19 @@
       height: 1px;
       background-color: rgba(#ffffff, 0.7);
     }
+
+    &::before {
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
   }
 }
 
-.footer__nav.is-active > .footer__nav-button {
+.footer__nav.is-active > .footer__nav-button,
+.footer__address.is-active > .footer__nav-button {
   opacity: 1;
   position: absolute;
-  top: 9px;
-  right: 0;
+  top: 10px;
+  right: 14px;
   display: block;
   width: 40px;
   height: 40px;
@@ -159,10 +164,6 @@
     width: 15px;
     height: 1px;
     background-color: rgba(#ffffff, 0.7);
-  }
-
-  &::before {
-    transform: translate(-50%, -50%) rotate(90deg);
   }
 }
 
