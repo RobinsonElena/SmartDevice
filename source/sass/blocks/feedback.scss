@@ -29,14 +29,14 @@
   display: flex;
   gap: 0 116px;
   padding-top: 167px;
-  padding-bottom: 252px;
+  padding-bottom: 249px;
   align-items: center;
   justify-content: left;
 
   @include vp-1023 {
     gap: 0;
     padding-top: 46px;
-    padding-bottom: 123px;
+    padding-bottom: 125px;
     justify-content: center;
   }
 

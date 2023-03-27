@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Умные технологии">
     <link rel="stylesheet" href="css/style.min.css">
-    <link rel="preload" href="./fonts/robotocondensed-regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="./fonts/robotocondensed-bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="./fonts/ptmono-regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/robotocondensed-regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/robotocondensed-bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/ptmono-regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <title>SmartDevice</title>
   </head>
   <body>
@@ -128,40 +128,46 @@
             <ul class="catalog__list">
               <li class="catalog__item">
                 <a class="catalog__link" href="#">
-                  <picture>
-                    <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog/bg-card1-mobile.webp 1x, img/catalog/bg-card1-mobile@2x.webp 2x">
-                    <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog/bg-card1-tablet.webp 1x, img/catalog/bg-card1-tablet@2x.webp 2x">
-                    <source type="image/webp" srcset="img/catalog/bg-card1-desktop.webp 1x, img/catalog/bg-card1-desktop@2x.webp 2x">
-                    <source media="(max-width: 767px)" srcset="img/catalog/bg-card1-mobile.jpg 1x, img/catalog/bg-card1-mobile@2x.jpg 2x">
-                    <source media="(max-width: 1023px)" srcset="img/catalog/bg-card1-tablet.jpg 1x, img/catalog/bg-card1-tablet@2x.jpg 2x">
-                    <img src="img/catalog/bg-card1-desktop.jpg" width="350" height="650" srcset="img/catalog/bg-card1-desktop@2x.jpg 2x" alt="Фрагмент печатной платы.">
-                  </picture>
+                  <div class="catalog__image-wrapper">
+                    <picture>
+                      <source type="image/webp" media="(max-width: 767px)" srcset="./img/catalog/bg-card1-mobile.webp 1x, ./img/catalog/bg-card1-mobile@2x.webp 2x">
+                      <source type="image/webp" media="(max-width: 1023px)" srcset="./img/catalog/bg-card1-tablet.webp 1x, ./img/catalog/bg-card1-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="./img/catalog/bg-card1-desktop.webp 1x, ./img/catalog/bg-card1-desktop@2x.webp 2x">
+                      <source media="(max-width: 767px)" srcset="./img/catalog/bg-card1-mobile.jpg 1x, ./img/catalog/bg-card1-mobile@2x.jpg 2x">
+                      <source media="(max-width: 1023px)" srcset="./img/catalog/bg-card1-tablet.jpg 1x, ./img/catalog/bg-card1-tablet@2x.jpg 2x">
+                      <img src="./img/catalog/bg-card1-desktop.jpg" width="350" height="650" srcset="./img/catalog/bg-card1-desktop@2x.jpg 2x" alt="Фрагмент печатной платы.">
+                    </picture>
+                  </div>
                   <h3>Производство печатных плат</h3>
                 </a>
               </li>
               <li class="catalog__item">
                 <a class="catalog__link" href="#">
-                  <picture>
-                    <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog/bg-card2-mobile.webp 1x, img/catalog/bg-card2-mobile@2x.webp 2x">
-                    <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog/bg-card2-tablet.webp 1x, img/catalog/bg-card2-tablet@2x.webp 2x">
-                    <source type="image/webp" srcset="img/catalog/bg-card2-desktop.webp 1x, img/catalog/bg-card2-desktop@2x.webp 2x">
-                    <source media="(max-width: 767px)" srcset="img/catalog/bg-card2-mobile.jpg 1x, img/catalog/bg-card2-mobile@2x.jpg 2x">
-                    <source media="(max-width: 1023px)" srcset="img/catalog/bg-card2-tablet.jpg 1x, img/catalog/bg-card2-tablet@2x.jpg 2x">
-                    <img src="img/catalog/bg-card2-desktop.jpg" width="350" height="650" srcset="img/catalog/bg-card2-desktop@2x.jpg 2x" alt="Фрагмент печатной платы.">
-                  </picture>
+                  <div class="catalog__image-wrapper">
+                    <picture>
+                      <source type="image/webp" media="(max-width: 767px)" srcset="./img/catalog/bg-card2-mobile.webp 1x, ./img/catalog/bg-card2-mobile@2x.webp 2x">
+                      <source type="image/webp" media="(max-width: 1023px)" srcset="./img/catalog/bg-card2-tablet.webp 1x, ./img/catalog/bg-card2-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="./img/catalog/bg-card2-desktop.webp 1x, ./img/catalog/bg-card2-desktop@2x.webp 2x">
+                      <source media="(max-width: 767px)" srcset="./img/catalog/bg-card2-mobile.jpg 1x, ./img/catalog/bg-card2-mobile@2x.jpg 2x">
+                      <source media="(max-width: 1023px)" srcset="./img/catalog/bg-card2-tablet.jpg 1x, ./img/catalog/bg-card2-tablet@2x.jpg 2x">
+                      <img src="./img/catalog/bg-card2-desktop.jpg" width="350" height="650" srcset="./img/catalog/bg-card2-desktop@2x.jpg 2x" alt="Фрагмент печатной платы.">
+                    </picture>
+                  </div>
                   <h3>Монтаж печатных плат</h3>
                 </a>
               </li>
               <li class="catalog__item">
                 <a class="catalog__link" href="#">
-                  <picture>
-                    <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog/bg-card3-mobile.webp 1x, img/catalog/bg-card3-mobile@2x.webp 2x">
-                    <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog/bg-card3-tablet.webp 1x, img/catalog/bg-card3-tablet@2x.webp 2x">
-                    <source type="image/webp" srcset="img/catalog/bg-card3-desktop.webp 1x, img/catalog/bg-card3-desktop@2x.webp 2x">
-                    <source media="(max-width: 767px)" srcset="img/catalog/bg-card3-mobile.jpg 1x, img/catalog/bg-card3-mobile@2x.jpg 2x">
-                    <source media="(max-width: 1023px)" srcset="img/catalog/bg-card3-tablet.jpg 1x, img/catalog/bg-card3-tablet@2x.jpg 2x">
-                    <img src="img/catalog/bg-card3-desktop.jpg" width="350" height="650" srcset="img/catalog/bg-card3-desktop@2x.jpg 2x" alt="Фрагмент печатной платы.">
-                  </picture>
+                  <div class="catalog__image-wrapper">
+                    <picture>
+                      <source type="image/webp" media="(max-width: 767px)" srcset="./img/catalog/bg-card3-mobile.webp 1x, ./img/catalog/bg-card3-mobile@2x.webp 2x">
+                      <source type="image/webp" media="(max-width: 1023px)" srcset="./img/catalog/bg-card3-tablet.webp 1x, ./img/catalog/bg-card3-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="./img/catalog/bg-card3-desktop.webp 1x, ./img/catalog/bg-card3-desktop@2x.webp 2x">
+                      <source media="(max-width: 767px)" srcset="./img/catalog/bg-card3-mobile.jpg 1x, ./img/catalog/bg-card3-mobile@2x.jpg 2x">
+                      <source media="(max-width: 1023px)" srcset="./img/catalog/bg-card3-tablet.jpg 1x, ./img/catalog/bg-card3-tablet@2x.jpg 2x">
+                      <img src="./img/catalog/bg-card3-desktop.jpg" width="350" height="650" srcset="./img/catalog/bg-card3-desktop@2x.jpg 2x" alt="Фрагмент печатной платы.">
+                    </picture>
+                  </div>
                   <h3>Комплектующие для&nbsp;светотехники</h3>
                 </a>
               </li>
@@ -184,12 +190,12 @@
               <form class="form feedback__form" action="http://echo.htmlacademy.ru/" method="post">
                 <div class="form__input">
                   <label for="name" data-required data-validate-type="text" data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля">
-                    <input type="text" id="name" name="name" placeholder="Имя" required data-focus>
+                    <input type="text" id="name" name="name" placeholder="Имя" required data-focus autocomplete="off">
                   </label>
                 </div>
                 <div class="form__input">
                   <label for="phone" data-required data-validate-type="phone" data-on-input-validate data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-phone-length="18">
-                    <input type="tel" id="phone" name="phone" placeholder="Телефон" required>
+                    <input type="tel" id="phone" name="phone" placeholder="Телефон" required autocomplete="off">
                   </label>
                 </div>
                 <div class="form__textarea">
@@ -197,7 +203,6 @@
                     <textarea id="question" name="question" placeholder="Ваш вопрос"></textarea>
                   </label>
                 </div>
-                <button class="btn form__button" type="submit">Задать вопрос</button>
                 <div class="form__checkbox">
                   <label for="checkbox" data-required data-validate-type="checkbox" data-message-base="Поле обязательно к заполнению">
                     <input class="visually-hidden" id="checkbox" type="checkbox" name="checkbox" checked="checked" required>
@@ -205,6 +210,7 @@
                     <span class="form__label">Я согласен на обработку персональных&nbsp;данных</span>
                   </label>
                 </div>
+                <button class="btn form__button" type="submit">Задать вопрос</button>
               </form>
             </div>
           </div>
@@ -288,9 +294,7 @@
               <div class="footer__nav-content accordion__content" data-accordion="content">
                 <ul class="footer__list footer__list--address">
                   <li class="footer__item">
-                    <a class="footer__link" href="#">
-                      <address>г. Мытищи, Олимпийский проспект, д.10</address>
-                    </a>
+                    <address>г. Мытищи, Олимпийский проспект, д.10</address>
                   </li>
                   <li class="footer__item">
                     <a class="footer__link" href="tel:+74955894050">+7 (495) 589-40-50</a>
@@ -322,12 +326,12 @@
               <form class="form form--modal feedback__form" action="http://echo.htmlacademy.ru/" method="post">
                 <div class="form__input">
                   <label for="modal-name" data-required data-validate-type="text" data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля">
-                    <input type="text" id="modal-name" name="modal-name" placeholder="Имя" required autofocus>
+                    <input type="text" id="modal-name" name="modal-name" placeholder="Имя" required autofocus autocomplete="off">
                   </label>
                 </div>
                 <div class="form__input">
                   <label for="modal-phone" data-required data-validate-type="phone" data-on-input-validate data-message-base="Поле обязательно к заполнению" data-message-extra="Проверьте корректность заполнения поля" data-phone-length="18">
-                    <input type="tel" id="modal-phone" name="modal-phone" placeholder="Телефон" required>
+                    <input type="tel" id="modal-phone" name="modal-phone" placeholder="Телефон" required autocomplete="off">
                   </label>
                 </div>
                 <div class="form__textarea">
@@ -335,7 +339,6 @@
                     <textarea id="modal-question" name="modal-question" placeholder="Ваш вопрос"></textarea>
                   </label>
                 </div>
-                <button class="btn form__button form__button--modal" type="submit">Отправить</button>
                 <div class="form__checkbox">
                   <label for="checkbox-modal" data-required data-validate-type="checkbox" data-message-base="Поле обязательно к заполнению">
                     <input class="visually-hidden" id="checkbox-modal" type="checkbox" name="checkbox-modal" checked="checked" required>
@@ -343,6 +346,7 @@
                     <span class="form__label">Я согласен на обработку персональных&nbsp;данных</span>
                   </label>
                 </div>
+                <button class="btn form__button form__button--modal" type="submit">Отправить</button>
               </form>
             </div>
           </div>

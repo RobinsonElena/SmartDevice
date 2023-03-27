@@ -7,7 +7,6 @@ export class Form {
     this._validator = new Validator();
     this._initPhoneInput = initPhoneInput;
     this._callbacks = callbacks;
-    this._validState = false;
   }
 
   _resetSelect(select) {
@@ -38,13 +37,10 @@ export class Form {
   }
 
   reset(form) {
-    this._validator._reset();
-    const parent = form.closest('[data-form-validate]');
     form.reset();
     form.querySelectorAll('.is-invalid').forEach((item) => item.classList.remove('is-invalid'));
     form.querySelectorAll('.is-valid').forEach((item) => item.classList.remove('is-valid'));
     form.querySelectorAll('.input-message').forEach((item) => item.remove());
-    parent.querySelectorAll('.input-message').forEach((item) => item.remove());
     setTimeout(() => {
       this._resetSelects(form);
     });
@@ -54,21 +50,17 @@ export class Form {
     this._initPhoneInput(parent);
   }
 
-  validateForm(event) {
-    return this._validator.validateForm(event);
+  validateForm(form) {
+    return this._validator.validateForm(form);
   }
 
   validateFormElement(item) {
     return this._validator.validateFormElement(item);
   }
 
-  createStates(item) {
-    return this._validator._createStates(item);
-  }
-
   _onFormSubmit(event, callback = null) {
-    this._validState = this.validateForm(event);
-    if (this._validState && callback) {
+    const result = this.validateForm(event.target);
+    if (result === true && callback) {
       this._callbacks[callback].successCallback(event);
       if (this._callbacks[callback].reset) {
         setTimeout(() => {
@@ -77,15 +69,18 @@ export class Form {
       }
       return;
     }
-    if (!this._validState && callback) {
+    if (result === false && callback) {
       this._callbacks[callback].errorCallback(event);
+      return;
+    }
+    if (result === true) {
+      event.target.submit();
       return;
     }
   }
 
   _onFormInput(item) {
     this.validateFormElement(item);
-    this.createStates(item);
   }
 
   _initValidate(parent) {
@@ -101,6 +96,7 @@ export class Form {
     form.noValidate = true;
 
     form.addEventListener('submit', (event) => {
+      event.preventDefault();
       this._onFormSubmit(event, callback);
     });
 
